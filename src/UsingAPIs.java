@@ -6,7 +6,8 @@ import java.util.Scanner;
 
 /**
  *
- * Created by alexandraqin on 4/14/15.
+ * Anthony Fermin
+ *
  * Exercises:
 
  Import the HashSet and create a HashSet object.
@@ -32,7 +33,6 @@ public class UsingAPIs {
       File mobyDick = new File("/Users/c4q-anthonyf/Desktop/accesscode/unit-1-bootcamp/resources/MobyDick.txt");
 
       // Getting a unique set of words for A Tale of Two Cities
-
       Scanner twoCitiesSc = new Scanner(twoCities);
       String formattedTwoCities = "";
 
@@ -63,9 +63,11 @@ public class UsingAPIs {
           mobyDickWords.add(mobyDickSc.next());
       }
 
+      // printing amount of unique words for each book
       System.out.println("Moby Dick unique word count: " + mobyDickWords.size());
       System.out.println("A Tale of Two Cities unique word count: " + twoCitiesWords.size());
 
+      // creating a set of the intersection of words between the two books
       HashSet<String> nonIntersection = new HashSet<String>(mobyDickWords);
       nonIntersection.removeAll(twoCitiesWords);
       HashSet<String> intersectionWords = new HashSet<String>(mobyDickWords);
@@ -73,12 +75,15 @@ public class UsingAPIs {
 
       System.out.println("\nSize of Intersection of Words: " + intersectionWords.size());
 
+      // creating a set of the union of words between the two books
       HashSet<String> unionWords = new HashSet<String>(mobyDickWords);
       unionWords.addAll(twoCitiesWords);
       System.out.println("Size of Union of Words: " + unionWords.size());
 
+      // creating an Iterator for the union of words
       Iterator<String> unionIterator = unionWords.iterator();
 
+      // prints out each word separated by a comma and space
       System.out.println("\nList of Union Words: ");
       while(unionIterator.hasNext()){
           System.out.print(unionIterator.next());
@@ -87,6 +92,5 @@ public class UsingAPIs {
           }
       }
       System.out.println();
-
   }
 }
