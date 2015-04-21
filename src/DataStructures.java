@@ -1,7 +1,6 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Scanner;
-import java.util.TreeSet;
+
 
 /**
  * Created by alexandraqin on 4/14/15.
@@ -83,7 +82,6 @@ public class DataStructures {
 
     // alphabetizes an arrayList of Strings
     public static void alphabetize(ArrayList<String> words){
-
             for(int i = 0; i < words.size() - 1; i++)
             {
                 for(int j = i; j >= 0; j--)
@@ -99,7 +97,6 @@ public class DataStructures {
                     }
                 }
             }
-
     }
 
   public static void main (String args[]) {
